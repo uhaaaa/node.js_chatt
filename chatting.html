@@ -22,25 +22,20 @@
             border-radius: 5px;
             padding:5px;
             line-height: 0.5px;
-            background-color: deepskyblue;
+            background-color: #9cc4d1;
             text-shadow: none;
         }
-        /* #content div:nth-child(2n){text-align: right;}
-        #content div:nth-child(2n+1){text-align: left;} */
-        
         .right{
             text-align: right;
         }
         .right span{
-            background-color: orange;
+            background-color: #ffec46;
         }
 
         .left{
             text-align: left;
-            background-color: orange;
+            background-color: #ffec46;
         }
-        
-        
     </style>
     <script>
         $(document).ready(function(){
@@ -68,7 +63,7 @@
                     } else {
                         $('.msg:last-child').removeClass("right");
                 }
-            //$("#content").listview('refresh');//목록 새로 고침
+            
             });
             
             //버튼클릭시 메시지 전송
@@ -78,8 +73,8 @@
                     message:$("#message").val(),
                     date:new Date().toLocaleTimeString()
                 });
-
-                $('#message').value = '';
+                $("#message").val('');
+                $("#message").focus();
             });
             
             
